@@ -50,7 +50,7 @@ report_error(){
 }
 
 if timeout --help > /dev/null 2>&1; then #if has `timeout` command
-    PREFIX="timeout 2 ";
+    PREFIX="timeout 10 ";
 else
     echo "timeout command is not support in current environment"
     echo "running time will not be counted"
@@ -72,7 +72,7 @@ for fcmm in ./tests/*.cmm; do
   if $PREFIX python ./check.py; then
     echo test [$(basename $fcmm)] matched
   else
-    report_error "mismatch"
+    report_error "mismatch or TLE"
     continue
   fi
 done
