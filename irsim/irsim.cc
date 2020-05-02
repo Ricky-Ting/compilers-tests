@@ -10,6 +10,7 @@
 #include <string>
 #include <tuple>
 #include <vector>
+#include <array>
 
 #include "fmt/printf.h"
 #include "irsim.h"
